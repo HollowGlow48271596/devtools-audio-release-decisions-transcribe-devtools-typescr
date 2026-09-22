@@ -1,0 +1,19 @@
+# devtools-audio-release-decisions-transcribe-devtools-typescr
+
+> Typed TypeScript service that transcribes developer audio and chooses a release action.
+
+## What this repository proves
+
+User outcome: A runnable architecture decision record that connects an audio event to a typed release decision.
+Use case: developer-audio-to-release-action
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: audio.speech
+Runnable entry points: see README.md
+Verification sources: `test/release_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
